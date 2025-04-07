@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+  }
+  
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
