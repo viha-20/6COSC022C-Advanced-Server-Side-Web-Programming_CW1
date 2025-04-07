@@ -25,7 +25,7 @@ const Footer = () => {
       backdropFilter: 'blur(5px)'
     }}>
       <Typography variant="body1" align="center" sx={{ fontWeight: 'bold' }}>
-        Country Explorer &copy; {new Date().getFullYear()}
+        Copyright &copy; {new Date().getFullYear()} | Vihangi Devthilini Jayasekara
       </Typography>
     </Box>
   );
