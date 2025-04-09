@@ -3,30 +3,6 @@ const User = require('../models/User');
 const { generateToken, revokeApiKeyForUser } = require('../services/authService');
 const { successResponse, errorResponse } = require('../utils/apiResponse');
 
-// const register = async (req, res) => {
-//   const errors = validationResult(req);
-//   if (!errors.isEmpty()) {
-//     return errorResponse(res, 'Validation errors', 400, errors.array());
-//   }
-
-//   const { username, email, password } = req.body;
-
-//   try {
-//     const existingUser = await User.findOne({ where: { email } });
-//     if (existingUser) {
-//       return errorResponse(res, 'User already exists with this email', 400);
-//     }
-
-//     const user = await User.create({ username, email, password });
-//     successResponse(res, { 
-//       user: { id: user.id, username: user.username, email: user.email }
-//     }, 'Registration successful. Please login to get your token.', 201);
-//   } catch (error) {
-//     console.error('Registration error:', error);
-//     errorResponse(res, 'Registration failed', 500);
-//   }
-// };
-
 
 const register = async (req, res) => {
   const errors = validationResult(req);
