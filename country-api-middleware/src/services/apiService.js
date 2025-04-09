@@ -1,3 +1,49 @@
+// const axios = require('axios');
+// const ApiKey = require('../models/ApiKey');
+// const UsageLog = require('../models/UsageLog');
+
+// const BASE_URL = 'https://restcountries.com/v3.1';
+
+// const fetchAllCountries = async () => {
+//   try {
+//     console.log('Fetching all countries from external API...');
+//     const response = await axios.get(`${BASE_URL}/all`);
+    
+//     if (!response.data || !Array.isArray(response.data)) {
+//       throw new Error('Invalid response format from external API');
+//     }
+
+//     console.log(`Received ${response.data.length} countries`);
+    
+//     return response.data.map(country => {
+//       try {
+//         return {
+//           name: country.name?.common || 'Unknown',
+//           currencies: country.currencies ? Object.keys(country.currencies) : [],
+//           capital: country.capital?.[0] || 'N/A',
+//           languages: country.languages ? Object.values(country.languages) : [],
+//           flag: country.flags?.png || country.flags?.svg || ''
+//         };
+//       } catch (error) {
+//         console.error('Error processing country:', country, error);
+//         return null;
+//       }
+//     }).filter(country => country !== null); // Filter out any null entries
+//   } catch (error) {
+//     console.error('Error in fetchAllCountries:', error.message);
+//     if (error.response) {
+//       console.error('External API response:', {
+//         status: error.response.status,
+//         data: error.response.data
+//       });
+//     }
+//     throw new Error(`Failed to fetch countries: ${error.message}`);
+//   }
+// };
+
+
+
+
 const axios = require('axios');
 const ApiKey = require('../models/ApiKey');
 const UsageLog = require('../models/UsageLog');
