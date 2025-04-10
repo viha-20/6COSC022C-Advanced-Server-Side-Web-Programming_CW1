@@ -1,31 +1,3 @@
-// const { fetchAllCountries, fetchCountryByName, logApiUsage } = require('../services/apiService');
-// const { successResponse, errorResponse } = require('../utils/apiResponse');
-
-// const getAllCountries = async (req, res) => {
-//   try {
-//     console.log('Starting getAllCountries request');
-//     await logApiUsage(req.apiKey.id, '/countries', req.ip);
-
-//     const countries = await fetchAllCountries();
-    
-//     if (!countries || countries.length === 0) {
-//       console.warn('No countries received from external API');
-//       return errorResponse(res, 'No countries found', 404);
-//     }
-    
-//     console.log(`Successfully retrieved ${countries.length} countries`);
-//     successResponse(res, { 
-//       countries,
-//       count: countries.length 
-//     }, 'Countries retrieved successfully');
-//   } catch (error) {
-//     console.error('Error in getAllCountries:', error.message);
-//     errorResponse(res, error.message, 500);
-//   }
-// };
-
-
-
 
 const { fetchAllCountries, fetchCountryByName, logApiUsage } = require('../services/apiService');
 const { successResponse, errorResponse } = require('../utils/apiResponse');

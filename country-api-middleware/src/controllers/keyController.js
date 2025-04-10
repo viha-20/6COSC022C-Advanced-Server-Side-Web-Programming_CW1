@@ -12,28 +12,6 @@ const generateNewApiKey = async (req, res) => {
   }
 };
 
-// const getApiKeyInfo = async (req, res) => {
-//   try {
-//     const apiKey = await ApiKey.findOne({
-//       where: { 
-//         userId: req.user.id,
-//         isActive: true 
-//       },
-//       attributes: ['key', 'lastUsed', 'usageCount', 'createdAt']
-//     });
-    
-//     if (!apiKey) {
-//       return errorResponse(res, 'No active API key found', 404);
-//     }
-    
-//     successResponse(res, { apiKey }, 'API key information retrieved');
-//   } catch (error) {
-//     console.error('Error getting API key info:', error);
-//     errorResponse(res, 'Failed to get API key information', 500);
-//   }
-// };
-
-
 
 const getApiKeyInfo = async (req, res) => {
   try {
