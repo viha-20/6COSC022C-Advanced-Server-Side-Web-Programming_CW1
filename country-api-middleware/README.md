@@ -29,3 +29,5 @@ A secure API middleware service that interfaces with RestCountries.com, providin
    ```bash
    git clone https://github.com/yourusername/country-api-middleware.git
    cd country-api-middleware
+   npm install
+   node start <- start the application
